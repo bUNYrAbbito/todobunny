@@ -23,7 +23,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <h1>todo App</h1>
+            <h1>todo Appcd</h1>
             <NoteForm addNote={handleAddNote} editNote={handleEditNote} currentNote={currentNote} />
             <NoteList onEdit={handleEditClick} />
         </div>
