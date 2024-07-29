@@ -1,38 +1,101 @@
+
 .App {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.note-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.note-item h3 {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.note-item button {
+  margin: 5px;
+}
+input{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+
+}
+textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+
+}
+button {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #007ACC;
+  outline: 3px #007ACC solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+button .text {
   color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
 }
 
-.App-link {
-  color: #61dafb;
+button svg path {
+  transition: 400ms;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: transparent;
 }
+
+button:hover .text {
+  color: #007ACC;
+}
+
+button:hover svg path {
+  fill: #007ACC;
+}
+h1 {
+  animation-name: colorchanger;
+  animation-duration: 10s; /* Change Duration */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes colorchanger {
+  0% {
+    color: #ee6055;
+  }
+
+  25% {
+    color: #60d394;
+  }
+
+  50% {
+    color: #aaf683;
+  }
+
+  75% {
+    color: #ffd97d;
+  }
+
+  100% {
+    color: #ff9b85;
+  }}
